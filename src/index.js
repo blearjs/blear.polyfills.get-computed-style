@@ -7,7 +7,7 @@ if (typeof CLASSICAL !== 'undefined' && CLASSICAL === true) {
      *
      * NOTE this is taken directly from https://github.com/jonathantneal/polyfill
      */
-    function getComputedStylePixel(element, property, fontSize) {
+    var getComputedStylePixel = function getComputedStylePixel(element, property, fontSize) {
         element.document; // Internet Explorer sometimes struggles to read currentStyle until the element's document is accessed.
 
         var
@@ -27,9 +27,9 @@ if (typeof CLASSICAL !== 'undefined' && CLASSICAL === true) {
                             suffix === 'pc' ? size * 12 * 96 / 72 :
                                 suffix === 'pt' ? size * 96 / 72 :
                                     size;
-    }
+    };
 
-    function setShortStyleProperty(style, property) {
+    var setShortStyleProperty = function setShortStyleProperty(style, property) {
         var
             borderSuffix = property === 'border' ? 'Width' : '',
             t = property + 'Top' + borderSuffix,
@@ -44,7 +44,7 @@ if (typeof CLASSICAL !== 'undefined' && CLASSICAL === true) {
     }
 
     // <CSSStyleDeclaration>
-    function CSSStyleDeclaration(element) {
+    var CSSStyleDeclaration = function CSSStyleDeclaration(element) {
         var
             style = this,
             currentStyle = element.currentStyle,
@@ -88,7 +88,7 @@ if (typeof CLASSICAL !== 'undefined' && CLASSICAL === true) {
         setShortStyleProperty(style, 'border');
 
         style.fontSize = Math.round(fontSize) + 'px';
-    }
+    };
 
     CSSStyleDeclaration.prototype = {
         constructor: CSSStyleDeclaration,
