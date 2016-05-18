@@ -1,7 +1,7 @@
 {
   "name": "blear.polyfills.get-computed-style",
-  "version": "1.0.0",
-  "description": "blear.polyfills.get-computed-style description",
+  "version": "1.0.1",
+  "description": "get-computed-style polyfills to IE8",
   "scripts": {},
   "preferGlobal": false,
   "bin": {},
@@ -11,6 +11,9 @@
   },
   "main": "src/index.js",
   "keywords": [
+    "blear",
+    "polyfills",
+    "getComputedStyle",
     "cloudcome",
     "ydr.me"
   ],
