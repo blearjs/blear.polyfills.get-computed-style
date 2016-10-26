@@ -142,7 +142,7 @@ if (typeof CLASSICAL !== 'undefined' && CLASSICAL === true) {
 
     if (!window.getComputedStyle) {
         // <window>.getComputedStyle
-        window.getComputedStyle = Window.prototype.getComputedStyle = function (element) {
+        window.getComputedStyle = function (element) {
             return new CSSStyleDeclaration(element);
         };
     }
