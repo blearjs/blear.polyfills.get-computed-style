@@ -1,7 +1,7 @@
 {
   "name": "blear.polyfills.get-computed-style",
-  "version": "1.0.4",
-  "description": "get-computed-style polyfills to IE8",
+  "version": "1.0.5",
+  "description": "get-computed-style polyfills to IE9",
   "scripts": {},
   "preferGlobal": false,
   "bin": {},
